@@ -36,10 +36,6 @@
 		DC65616413A969B600A7AC53 /* libkobold2d-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615813A969B600A7AC53 /* libkobold2d-ios.a */; };
 		DC73CA79162B4E330041997C /* dg_grounds32-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC73CA78162B4E330041997C /* dg_grounds32-hd.png */; };
 		DC73CA7A162B4E330041997C /* dg_grounds32-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC73CA78162B4E330041997C /* dg_grounds32-hd.png */; };
-		DC84D388162592870029E280 /* MyFirstSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC84D387162592870029E280 /* MyFirstSceneViewController.m */; };
-		DC84D38A1625928F0029E280 /* MyFirstSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC84D387162592870029E280 /* MyFirstSceneViewController.m */; };
-		DC87CD20161709B600F03D9F /* PhysicNutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC87CD1F161709B600F03D9F /* PhysicNutsViewController.m */; };
-		DC87CD21161709B600F03D9F /* PhysicNutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC87CD1F161709B600F03D9F /* PhysicNutsViewController.m */; };
 		DC912CF51629998200AD381F /* dg_grounds32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC912CF01629998200AD381F /* dg_grounds32.png */; };
 		DC912CF61629998200AD381F /* dg_grounds32.png in Resources */ = {isa = PBXBuildFile; fileRef = DC912CF01629998200AD381F /* dg_grounds32.png */; };
 		DC912CF71629998200AD381F /* game-events.png in Resources */ = {isa = PBXBuildFile; fileRef = DC912CF11629998200AD381F /* game-events.png */; };
@@ -47,8 +43,6 @@
 		DC912CF91629998200AD381F /* orthogonal.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC912CF21629998200AD381F /* orthogonal.tmx */; };
 		DC912CFA1629998200AD381F /* orthogonal.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DC912CF21629998200AD381F /* orthogonal.tmx */; };
 		DC979E3E13B35F8800656CB9 /* libcocos2d-extensions-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC979E3D13B35F8800656CB9 /* libcocos2d-extensions-mac.a */; };
-		DCA37DC916135AF900F207E0 /* CoconutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA37DC816135AF900F207E0 /* CoconutsViewController.m */; };
-		DCA37DCA16135AF900F207E0 /* CoconutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA37DC816135AF900F207E0 /* CoconutsViewController.m */; };
 		DCC1A0FA13A94ED5005BD75D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0F913A94ED5005BD75D /* Default.png */; };
 		DCC1A0FE13A94ED5005BD75D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0FD13A94ED5005BD75D /* Icon-72.png */; };
 		DCC1A10013A94ED5005BD75D /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0FF13A94ED5005BD75D /* Icon-Small-50.png */; };
@@ -67,8 +61,6 @@
 		DCC1A3B013A94F1A005BD75D /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A39513A94F1A005BD75D /* config.lua */; };
 		DCCF5F1C161746E20067D8C3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A10513A94ED5005BD75D /* Icon.png */; };
 		DCCF5F1E161747BD0067D8C3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0F913A94ED5005BD75D /* Default.png */; };
-		DCF89D3E1625B92100E417F5 /* MySecondSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF89D3D1625B92100E417F5 /* MySecondSceneViewController.m */; };
-		DCF89D3F1625B92100E417F5 /* MySecondSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF89D3D1625B92100E417F5 /* MySecondSceneViewController.m */; };
 		DCF95CD213A97EC500AE3B80 /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF95CC913A97EC500AE3B80 /* libcocos2d-mac.a */; };
 		DCF95CD413A97EC500AE3B80 /* libkobold2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF95CCB13A97EC500AE3B80 /* libkobold2d-mac.a */; };
 /* End PBXBuildFile section */
@@ -97,10 +89,6 @@
 		DC65615713A969B600A7AC53 /* libcocosdenshion-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libcocosdenshion-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC65615813A969B600A7AC53 /* libkobold2d-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libkobold2d-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC73CA78162B4E330041997C /* dg_grounds32-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dg_grounds32-hd.png"; sourceTree = "<group>"; };
-		DC84D386162592870029E280 /* MyFirstSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFirstSceneViewController.h; sourceTree = "<group>"; };
-		DC84D387162592870029E280 /* MyFirstSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFirstSceneViewController.m; sourceTree = "<group>"; };
-		DC87CD1E161709B600F03D9F /* PhysicNutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicNutsViewController.h; sourceTree = "<group>"; };
-		DC87CD1F161709B600F03D9F /* PhysicNutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicNutsViewController.m; sourceTree = "<group>"; };
 		DC912CEF1629998200AD381F /* Author&License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Author&License.txt"; sourceTree = "<group>"; };
 		DC912CF01629998200AD381F /* dg_grounds32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dg_grounds32.png; sourceTree = "<group>"; };
 		DC912CF11629998200AD381F /* game-events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-events.png"; sourceTree = "<group>"; };
@@ -109,8 +97,6 @@
 		DC9C33E713B5024400931BF2 /* BuildSettings-Debug-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E813B5024400931BF2 /* BuildSettings-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E913B5024400931BF2 /* BuildSettings-Release-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Release-Mac.xcconfig"; sourceTree = "<group>"; };
-		DCA37DC716135AF900F207E0 /* CoconutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoconutsViewController.h; sourceTree = "<group>"; };
-		DCA37DC816135AF900F207E0 /* CoconutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoconutsViewController.m; sourceTree = "<group>"; };
 		DCC1A0E313A94ED5005BD75D /* CardGame-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardGame-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1A0F913A94ED5005BD75D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DCC1A0FD13A94ED5005BD75D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -131,8 +117,6 @@
 		DCC1A39213A94F1A005BD75D /* Prefix-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-iOS.pch"; sourceTree = "<group>"; };
 		DCC1A39313A94F1A005BD75D /* Prefix-Mac.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-Mac.pch"; sourceTree = "<group>"; };
 		DCC1A39513A94F1A005BD75D /* config.lua */ = {isa = PBXFileReference; explicitFileType = sourcecode.applescript; fileEncoding = 4; path = config.lua; sourceTree = "<group>"; };
-		DCF89D3C1625B92100E417F5 /* MySecondSceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySecondSceneViewController.h; sourceTree = "<group>"; };
-		DCF89D3D1625B92100E417F5 /* MySecondSceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySecondSceneViewController.m; sourceTree = "<group>"; };
 		DCF95CC913A97EC500AE3B80 /* libcocos2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libcocos2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF95CCB13A97EC500AE3B80 /* libkobold2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libkobold2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-iOS.xcconfig"; sourceTree = "<group>"; };
@@ -286,14 +270,6 @@
 				321A0300168462CF00E436A9 /* ViewController */,
 				DCC1A38D13A94F1A005BD75D /* AppDelegate.h */,
 				DCC1A38E13A94F1A005BD75D /* AppDelegate.m */,
-				DCA37DC716135AF900F207E0 /* CoconutsViewController.h */,
-				DCA37DC816135AF900F207E0 /* CoconutsViewController.m */,
-				DC87CD1E161709B600F03D9F /* PhysicNutsViewController.h */,
-				DC87CD1F161709B600F03D9F /* PhysicNutsViewController.m */,
-				DC84D386162592870029E280 /* MyFirstSceneViewController.h */,
-				DC84D387162592870029E280 /* MyFirstSceneViewController.m */,
-				DCF89D3C1625B92100E417F5 /* MySecondSceneViewController.h */,
-				DCF89D3D1625B92100E417F5 /* MySecondSceneViewController.m */,
 				DCC1A39413A94F1A005BD75D /* Resources */,
 				DCC1A3CF13A94F2C005BD75D /* Supporting Files */,
 			);
@@ -466,10 +442,6 @@
 			files = (
 				DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
-				DCA37DC916135AF900F207E0 /* CoconutsViewController.m in Sources */,
-				DC87CD20161709B600F03D9F /* PhysicNutsViewController.m in Sources */,
-				DC84D388162592870029E280 /* MyFirstSceneViewController.m in Sources */,
-				DCF89D3E1625B92100E417F5 /* MySecondSceneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,10 +451,6 @@
 			files = (
 				DCC1A3AA13A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AE13A94F1A005BD75D /* main.m in Sources */,
-				DCA37DCA16135AF900F207E0 /* CoconutsViewController.m in Sources */,
-				DC87CD21161709B600F03D9F /* PhysicNutsViewController.m in Sources */,
-				DC84D38A1625928F0029E280 /* MyFirstSceneViewController.m in Sources */,
-				DCF89D3F1625B92100E417F5 /* MySecondSceneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

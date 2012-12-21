@@ -6,16 +6,16 @@
  */
 
 #import "AppDelegate.h"
-#import "CoconutsViewController.h"
-#import "PhysicNutsViewController.h"
-#import "MyFirstSceneViewController.h"
+//#import "CoconutsViewController.h"
+//#import "PhysicNutsViewController.h"
+//#import "MyFirstSceneViewController.h"
 
 @implementation AppDelegate
 
 -(void) initializationComplete
 {
-	MyFirstSceneViewController* myFirstSceneViewController = [MyFirstSceneViewController controller];
-	[self.gameController presentSceneViewController:myFirstSceneViewController];
+//	MyFirstSceneViewController* myFirstSceneViewController = [MyFirstSceneViewController controller];
+//	[self.gameController presentSceneViewController:myFirstSceneViewController];
 	
 	NSLog(@"%@", [self.gameController.debugController objectGraph]);
 	NSLog(@"-------");
