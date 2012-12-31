@@ -6,7 +6,7 @@
  */
 
 #import "AppDelegate.h"
-//#import "CoconutsViewController.h"
+#import "CGMainMenuViewController.h"
 //#import "PhysicNutsViewController.h"
 //#import "MyFirstSceneViewController.h"
 
@@ -14,11 +14,12 @@
 
 -(void) initializationComplete
 {
-//	MyFirstSceneViewController* myFirstSceneViewController = [MyFirstSceneViewController controller];
-//	[self.gameController presentSceneViewController:myFirstSceneViewController];
-	
+	CGMainMenuViewController* mainMenuVC = [CGMainMenuViewController controller];
+	[self.gameController presentSceneViewController:mainMenuVC];
+    
 	NSLog(@"%@", [self.gameController.debugController objectGraph]);
 	NSLog(@"-------");
+    
 }
 
 -(id) alternateView

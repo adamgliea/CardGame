@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */; };
 		DC21B88B1511078F00FD4891 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8881511078F00FD4891 /* fps_images-hd.png */; };
 		DC21B88C1511078F00FD4891 /* fps_images-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8891511078F00FD4891 /* fps_images-ipadhd.png */; };
 		DC21B88D1511078F00FD4891 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B88A1511078F00FD4891 /* fps_images.png */; };
@@ -66,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMainMenuViewController.h; sourceTree = "<group>"; };
+		32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMainMenuViewController.m; sourceTree = "<group>"; };
 		DC21B8881511078F00FD4891 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 		DC21B8891511078F00FD4891 /* fps_images-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-ipadhd.png"; sourceTree = "<group>"; };
 		DC21B88A1511078F00FD4891 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
@@ -160,9 +163,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		321A0300168462CF00E436A9 /* ViewController */ = {
+		32AC7CE316918DC80013CDEA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */,
+				32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		DCC1A0F713A94ED5005BD75D /* Projectfiles-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				32AC7CE316918DC80013CDEA /* ViewController */,
 				DCC1A0F813A94ED5005BD75D /* Resources */,
 			);
 			path = "Projectfiles-iOS";
@@ -267,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				321A02FF168462CE00E436A9 /* Model */,
-				321A0300168462CF00E436A9 /* ViewController */,
 				DCC1A38D13A94F1A005BD75D /* AppDelegate.h */,
 				DCC1A38E13A94F1A005BD75D /* AppDelegate.m */,
 				DCC1A39413A94F1A005BD75D /* Resources */,
@@ -442,6 +447,7 @@
 			files = (
 				DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
+				32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -499,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
