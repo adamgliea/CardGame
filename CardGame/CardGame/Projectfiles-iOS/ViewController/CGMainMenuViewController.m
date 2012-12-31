@@ -10,4 +10,12 @@
 
 @implementation CGMainMenuViewController
 
+- (id)initWithSceneModel:(KTSceneModel *)sceneModel {
+    self = [super initWithSceneModel:sceneModel];
+    if (self != nil) {
+    }
+    
+    return self;
+}
+
 @end

@@ -6,8 +6,8 @@
 //
 //
 
-#import "KTViewController.h"
+#import "KTSceneViewController.h"
 
-@interface CGMainMenuViewController : KTViewController
+@interface CGMainMenuViewController : KTSceneViewController
 
 @end
