@@ -28,6 +28,8 @@ static Class kKTViewControllerClass;
 	{
 		kKTViewControllerClass = [KTViewController class];
 	}
+
+	self.tag = kInvalidControllerTag;
 	
 	// the game controller reference should be set even before initWithDefaults
 	[self internal_setGameController:[KTGameController sharedGameController]];
@@ -218,6 +220,32 @@ static Class kKTViewControllerClass;
 	for (KTController* controller in _subControllers)
 	{
 		if ([controller isKindOfClass:controllerClass])
+		{
+			return controller;
+		}
+	}
+	
+	return nil;
+}
+
+-(KTController*) subControllerByName:(NSString*)controllerName
+{
+	for (KTController* controller in _subControllers)
+	{
+		if ([controller.name isEqualToString:controllerName])
+		{
+			return controller;
+		}
+	}
+	
+	return nil;
+}
+
+-(KTController*) subControllerByTag:(NSInteger)controllerTag
+{
+	for (KTController* controller in _subControllers)
+	{
+		if (controller.tag == controllerTag)
 		{
 			return controller;
 		}

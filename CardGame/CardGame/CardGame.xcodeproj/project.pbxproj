@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3258D85E169E9E1100C06F6D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258D85D169E9E1100C06F6D /* GameKit.framework */; };
 		32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */; };
 		DC21B88B1511078F00FD4891 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8881511078F00FD4891 /* fps_images-hd.png */; };
 		DC21B88C1511078F00FD4891 /* fps_images-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8891511078F00FD4891 /* fps_images-ipadhd.png */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3258D85D169E9E1100C06F6D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMainMenuViewController.h; sourceTree = "<group>"; };
 		32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMainMenuViewController.m; sourceTree = "<group>"; };
 		DC21B8881511078F00FD4891 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3258D85E169E9E1100C06F6D /* GameKit.framework in Frameworks */,
 				DC272476160E48A600D88944 /* libkoboldtouch-ios.a in Frameworks */,
 				DC65615C13A969B600A7AC53 /* libbox2d-ios.a in Frameworks */,
 				DC65616013A969B600A7AC53 /* libcocos2d-extensions-ios.a in Frameworks */,
@@ -208,6 +211,7 @@
 		DCC1A0E613A94ED5005BD75D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3258D85D169E9E1100C06F6D /* GameKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -498,7 +502,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};

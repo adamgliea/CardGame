@@ -18,6 +18,8 @@
 /** typedef of the CreateModelBlock */
 typedef KTModel* (^CreateModelBlock)(void);
 
+static const NSInteger kInvalidControllerTag = -1;
+
 /** Base class for controller objects. Controllers have a model and an array of subControllers. */
 @interface KTController : KTModelControllerBase <KTMultiTouchProtocol, KTMotionProtocol>
 {
@@ -42,6 +44,11 @@ typedef KTModel* (^CreateModelBlock)(void);
  and only when the model is not loaded from an archive. */
 @property (nonatomic, copy) CreateModelBlock createModelBlock;
 
+/** Identifies this controller. Can be used in subControllerByName to access that specific subcontroller. */
+@property (nonatomic, copy) NSString* name;
+/** Identifies this controller. Can be used in subControllerByTag to access that specific subcontroller. */
+@property (nonatomic) NSInteger tag;
+
 /** Creates and returns a new controller object without a model. */
 +(id) controller;
 
@@ -63,6 +70,10 @@ typedef KTModel* (^CreateModelBlock)(void);
 
 /** Returns a sub controller by its class. Returns the first sub controller whose class matches the controllerClass parameter. */
 -(KTController*) subControllerByClass:(Class)controllerClass;
+/** Returns a sub controller by its name. Returns the first sub controller whose name property matches the name parameter. */
+-(KTController*) subControllerByName:(NSString*)controllerName;
+/** Returns a sub controller by its tag. Returns the first sub controller whose tag property matches the tag parameter. */
+-(KTController*) subControllerByTag:(NSInteger)controllerTag;
 
 /** Runs just before the sceneViewController is replaced with a new one. The self.sceneViewController property still points to the previous sceneViewController. */
 -(void) sceneWillChange;

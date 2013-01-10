@@ -17,9 +17,16 @@
 	CGMainMenuViewController* mainMenuVC = [CGMainMenuViewController controller];
 	[self.gameController presentSceneViewController:mainMenuVC];
     
-	NSLog(@"%@", [self.gameController.debugController objectGraph]);
-	NSLog(@"-------");
+//	NSLog(@"%@", [self.gameController.debugController objectGraph]);
+//	NSLog(@"-------");
     
+}
+
+- (void)tryToRunFirstScene {
+    [super tryToRunFirstScene];
+    
+    CGMainMenuViewController *mainMenuVC = (CGMainMenuViewController *)self.gameController.presentedSceneViewController;
+    [mainMenuVC authGameCenter];
 }
 
 -(id) alternateView

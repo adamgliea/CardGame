@@ -103,6 +103,7 @@
 -(void) addSubView:(CCNode*)viewNode
 {
 	NSAssert1(viewNode, @"viewNode is nil - this indicates a subViewController of viewController (%@) isn't actually managing a view! Perhaps you implemented -(void) loadView without creating and assigning a node to self.rootNode ?", self);
+	NSAssert1(self.rootNode, @"can't add view, rootNode of parent view controller (%@) is nil!", self);
 	NSAssert1(self.rootNode != viewNode, @"can't add view, rootNode and viewNode are the same! (%@)", viewNode);
 
 	if (viewNode)

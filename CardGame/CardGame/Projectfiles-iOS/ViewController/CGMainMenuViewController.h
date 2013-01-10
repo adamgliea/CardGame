@@ -10,4 +10,6 @@
 
 @interface CGMainMenuViewController : KTSceneViewController
 
+- (void)authGameCenter;
+
 @end
