@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32562B5016A00CFB00F97D92 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32562B2E16A00CFB00F97D92 /* CSVParser.m */; };
+		32562B6C16A00EBE00F97D92 /* HeroCard.csv in Resources */ = {isa = PBXBuildFile; fileRef = 32562B6316A00EBE00F97D92 /* HeroCard.csv */; };
 		3258D85E169E9E1100C06F6D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258D85D169E9E1100C06F6D /* GameKit.framework */; };
 		32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */; };
 		DC21B88B1511078F00FD4891 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8881511078F00FD4891 /* fps_images-hd.png */; };
@@ -68,6 +70,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32562B2D16A00CFB00F97D92 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
+		32562B2E16A00CFB00F97D92 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
+		32562B6316A00EBE00F97D92 /* HeroCard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HeroCard.csv; sourceTree = "<group>"; };
 		3258D85D169E9E1100C06F6D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMainMenuViewController.h; sourceTree = "<group>"; };
 		32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMainMenuViewController.m; sourceTree = "<group>"; };
@@ -166,6 +171,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		32562AFD16A00CFB00F97D92 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				32562B2C16A00CFB00F97D92 /* CSVParser */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		32562B2C16A00CFB00F97D92 /* CSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				32562B2D16A00CFB00F97D92 /* CSVParser.h */,
+				32562B2E16A00CFB00F97D92 /* CSVParser.m */,
+			);
+			path = CSVParser;
+			sourceTree = "<group>";
+		};
+		32562B5716A00EBE00F97D92 /* GameResources */ = {
+			isa = PBXGroup;
+			children = (
+				32562B6216A00EBE00F97D92 /* ConfigFiles */,
+			);
+			name = GameResources;
+			path = ../GameResources;
+			sourceTree = "<group>";
+		};
+		32562B6216A00EBE00F97D92 /* ConfigFiles */ = {
+			isa = PBXGroup;
+			children = (
+				32562B6316A00EBE00F97D92 /* HeroCard.csv */,
+			);
+			path = ConfigFiles;
+			sourceTree = "<group>";
+		};
 		32AC7CE316918DC80013CDEA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +229,8 @@
 		DCC1A0D613A94EC0005BD75D = {
 			isa = PBXGroup;
 			children = (
+				32562B5716A00EBE00F97D92 /* GameResources */,
+				32562AFD16A00CFB00F97D92 /* ThirdParty */,
 				DCC1A38C13A94F1A005BD75D /* Projectfiles */,
 				DCC1A0F713A94ED5005BD75D /* Projectfiles-iOS */,
 				DCC1A26413A94EE6005BD75D /* Projectfiles-Mac */,
@@ -415,6 +456,7 @@
 				DC3A5BB91633364700D0C54F /* konqa32.png in Resources */,
 				DC2AE21C163AD9F600F2B1BD /* particlefx.plist in Resources */,
 				DC2AE21E163AD9F600F2B1BD /* particlefx.png in Resources */,
+				32562B6C16A00EBE00F97D92 /* HeroCard.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +494,7 @@
 				DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
 				32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */,
+				32562B5016A00CFB00F97D92 /* CSVParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

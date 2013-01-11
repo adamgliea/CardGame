@@ -7,6 +7,7 @@
 //
 
 #import "CGMainMenuViewController.h"
+#import "CSVParser.h"
 
 @interface CGMainMenuViewController()
 
@@ -21,6 +22,20 @@
 - (id)initWithSceneModel:(KTSceneModel *)sceneModel {
     self = [super initWithSceneModel:sceneModel];
     if (self != nil) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"HeroCard" ofType:@"csv"];
+        NSString *fileContent = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        
+//        NSArray *aaa = @[@"id", @"Name", @"Faction", @"Unique", @"CostType[1]", @"CostUnit[1]", @"CostNum[1]",
+//                         @"CostType[2]", @"CostUnit[1]", @"CostNum[1]", @"Stars", @"ATK", @"DEF", @"BackgroundDescription",
+//                         @"Image", @"SkillName[1]", @"SkillDescription[1]", @"TriggeredEffect[1]", @"SkillName[2]", @"SkillDescription[2]",
+//                         @"TriggeredEffect[2]"];
+        CSVParser *p = [[CSVParser alloc] initWithString:fileContent
+                                               separator:@","
+                                               hasHeader:YES
+                                              fieldNames:nil];
+        NSArray *b = [p arrayOfParsedRows];
+        
+        int i = 0;
     }
     
     return self;
