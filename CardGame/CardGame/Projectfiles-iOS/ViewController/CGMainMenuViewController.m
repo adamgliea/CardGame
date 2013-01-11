@@ -31,16 +31,28 @@
 - (void)authGameCenter {
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     [localPlayer authenticateWithCompletionHandler:^(NSError *error) {
+        UIAlertView *authErrorAlertView = nil;
+        
         if (error != nil) {
-            UIAlertView *authErrorAlertView = [[UIAlertView alloc] initWithTitle:@"GameCenter认证错误"
-                                                                         message:[error debugDescription]
-                                                                        delegate:nil
-                                                               cancelButtonTitle:nil
-                                                               otherButtonTitles:@"确定", nil];
+            authErrorAlertView = [[UIAlertView alloc] initWithTitle:@"GameCenter认证错误"
+                                                            message:[error debugDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"确定", nil];
             [authErrorAlertView show];
         }
         else {
-            [self showAutoMatchView];
+            if (localPlayer.isAuthenticated) {
+                [self showAutoMatchView];
+            }
+            else {
+                authErrorAlertView = [[UIAlertView alloc] initWithTitle:@"必须登陆GameCenter才能玩哦"
+                                                                message:[error debugDescription]
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"确定", nil];
+                [authErrorAlertView show];
+            }
         }
     }];
 }
@@ -65,7 +77,41 @@
 #pragma mark -- UI Actions
 
 - (void)clickAutoMatchButton:(id)sender {
-    int i = 0;
+    GKMatchRequest *matchRequest = [[GKMatchRequest alloc] init];
+    matchRequest.minPlayers = 2;
+    matchRequest.maxPlayers = 2;
+    matchRequest.defaultNumberOfPlayers = 2;
+    
+    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:matchRequest];
+    mmvc.matchmakerDelegate = self;
+    
+    CCDirector *director = [CCDirector sharedDirector];
+    [director presentViewController:mmvc animated:YES completion:nil];
+}
+
+#pragma mark -- GKMatchmakerViewControllerDelegate
+
+- (void)matchmakerViewControllerWasCancelled:(GKMatchmakerViewController *)viewController {
+    CCDirector *director = [CCDirector sharedDirector];
+    [director dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFailWithError:(NSError *)error {
+    if (error != nil) {
+        UIAlertView *authErrorAlertView = [[UIAlertView alloc] initWithTitle:@"GameCenter匹配错误"
+                                                        message:[error debugDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"确定", nil];
+        
+        [authErrorAlertView show];
+    }
+}
+
+- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFindMatch:(GKMatch *)match {
+    CCDirector *director = [CCDirector sharedDirector];
+    [director dismissViewControllerAnimated:YES completion:^{
+    }];
 }
 
 @end

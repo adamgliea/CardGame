@@ -8,7 +8,7 @@
 
 #import "KTSceneViewController.h"
 
-@interface CGMainMenuViewController : KTSceneViewController
+@interface CGMainMenuViewController : KTSceneViewController <GKMatchmakerViewControllerDelegate>
 
 - (void)authGameCenter;
 
