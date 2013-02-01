@@ -7,12 +7,13 @@
 //
 
 #import "CGMainMenuViewController.h"
-#import "CSVParser.h"
+#import "CGGamePlayViewController.h"
 
 @interface CGMainMenuViewController()
 
-- (void)showAutoMatchView;
+@property (nonatomic, strong) UIButton *automatchButton;
 
+- (void)showAutoMatchView;
 - (void)clickAutoMatchButton:(id)sender;
 
 @end
@@ -22,20 +23,6 @@
 - (id)initWithSceneModel:(KTSceneModel *)sceneModel {
     self = [super initWithSceneModel:sceneModel];
     if (self != nil) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"HeroCard" ofType:@"csv"];
-        NSString *fileContent = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        
-//        NSArray *aaa = @[@"id", @"Name", @"Faction", @"Unique", @"CostType[1]", @"CostUnit[1]", @"CostNum[1]",
-//                         @"CostType[2]", @"CostUnit[1]", @"CostNum[1]", @"Stars", @"ATK", @"DEF", @"BackgroundDescription",
-//                         @"Image", @"SkillName[1]", @"SkillDescription[1]", @"TriggeredEffect[1]", @"SkillName[2]", @"SkillDescription[2]",
-//                         @"TriggeredEffect[2]"];
-        CSVParser *p = [[CSVParser alloc] initWithString:fileContent
-                                               separator:@","
-                                               hasHeader:YES
-                                              fieldNames:nil];
-        NSArray *b = [p arrayOfParsedRows];
-        
-        int i = 0;
     }
     
     return self;
@@ -76,32 +63,29 @@
 
 - (void)showAutoMatchView {
     CCDirector *director = [CCDirector sharedDirector];
-    
-    UIButton *automatchButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    automatchButton.frame = CGRectMake(0, 0, 100, 30);
-    [automatchButton setTitle:@"开始自动匹配" forState:UIControlStateNormal];
-    [automatchButton addTarget:self action:@selector(clickAutoMatchButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    CGRect screenBound = [UIScreen mainScreen].bounds;
-    automatchButton.center = CGPointMake(screenBound.size.width * 0.5,
-                                         screenBound.size.height * 0.5);
-    
-    [director.view addSubview:automatchButton];
+    [director.view addSubview:self.automatchButton];
 }
 
 #pragma mark -- UI Actions
 
 - (void)clickAutoMatchButton:(id)sender {
-    GKMatchRequest *matchRequest = [[GKMatchRequest alloc] init];
-    matchRequest.minPlayers = 2;
-    matchRequest.maxPlayers = 2;
-    matchRequest.defaultNumberOfPlayers = 2;
+//    GKMatchRequest *matchRequest = [[GKMatchRequest alloc] init];
+//    matchRequest.minPlayers = 2;
+//    matchRequest.maxPlayers = 2;
+//    matchRequest.defaultNumberOfPlayers = 2;
+//    
+//    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:matchRequest];
+//    mmvc.matchmakerDelegate = self;
+//    
+//    CCDirector *director = [CCDirector sharedDirector];
+//    [director presentViewController:mmvc animated:YES completion:nil];
     
-    GKMatchmakerViewController *mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:matchRequest];
-    mmvc.matchmakerDelegate = self;
+    [self.automatchButton removeFromSuperview];
+    self.automatchButton = nil;
     
-    CCDirector *director = [CCDirector sharedDirector];
-    [director presentViewController:mmvc animated:YES completion:nil];
+    CGGamePlayViewController *gpvc = [CGGamePlayViewController controller];
+    [self.gameController presentSceneViewController:gpvc];
+//    [self addSubController:gpvc];
 }
 
 #pragma mark -- GKMatchmakerViewControllerDelegate
@@ -127,6 +111,23 @@
     CCDirector *director = [CCDirector sharedDirector];
     [director dismissViewControllerAnimated:YES completion:^{
     }];
+}
+
+#pragma mark -- Set/Get Functions
+
+- (UIButton *)automatchButton {
+    if (_automatchButton == nil) {
+        _automatchButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _automatchButton.frame = CGRectMake(0, 0, 100, 30);
+        [_automatchButton setTitle:@"开始自动匹配" forState:UIControlStateNormal];
+        [_automatchButton addTarget:self action:@selector(clickAutoMatchButton:) forControlEvents:UIControlEventTouchUpInside];
+        
+        CGRect screenBound = [UIScreen mainScreen].bounds;
+        _automatchButton.center = CGPointMake(screenBound.size.width * 0.5,
+                                              screenBound.size.height * 0.5);
+    }
+    
+    return _automatchButton;
 }
 
 @end

@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322FC50516A683360027E29F /* CGGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FC50416A683360027E29F /* CGGamePlayViewController.m */; };
+		322FC50816A68AC50027E29F /* CGBeenShownCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FC50716A68AC50027E29F /* CGBeenShownCardViewController.m */; };
+		322FC50C16A692180027E29F /* CardGame.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322FC50A16A692180027E29F /* CardGame.plist */; };
+		322FC50D16A692180027E29F /* CardGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 322FC50B16A692180027E29F /* CardGame.png */; };
 		32562B5016A00CFB00F97D92 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32562B2E16A00CFB00F97D92 /* CSVParser.m */; };
 		32562B6C16A00EBE00F97D92 /* HeroCard.csv in Resources */ = {isa = PBXBuildFile; fileRef = 32562B6316A00EBE00F97D92 /* HeroCard.csv */; };
 		3258D85E169E9E1100C06F6D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3258D85D169E9E1100C06F6D /* GameKit.framework */; };
+		32A4429B16A64EE300A2C95F /* CGGameDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A4429A16A64EE300A2C95F /* CGGameDataManager.m */; };
+		32A442A016A6570900A2C95F /* StratagemCard.csv in Resources */ = {isa = PBXBuildFile; fileRef = 32A4429D16A6570900A2C95F /* StratagemCard.csv */; };
+		32A442A116A6570900A2C95F /* TrapCard.csv in Resources */ = {isa = PBXBuildFile; fileRef = 32A4429E16A6570900A2C95F /* TrapCard.csv */; };
+		32A442A216A6570900A2C95F /* TriggeredEffect.csv in Resources */ = {isa = PBXBuildFile; fileRef = 32A4429F16A6570900A2C95F /* TriggeredEffect.csv */; };
 		32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */; };
 		DC21B88B1511078F00FD4891 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8881511078F00FD4891 /* fps_images-hd.png */; };
 		DC21B88C1511078F00FD4891 /* fps_images-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B8891511078F00FD4891 /* fps_images-ipadhd.png */; };
@@ -70,10 +78,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322FC50316A683360027E29F /* CGGamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGamePlayViewController.h; sourceTree = "<group>"; };
+		322FC50416A683360027E29F /* CGGamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGGamePlayViewController.m; sourceTree = "<group>"; };
+		322FC50616A68AC50027E29F /* CGBeenShownCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGBeenShownCardViewController.h; sourceTree = "<group>"; };
+		322FC50716A68AC50027E29F /* CGBeenShownCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGBeenShownCardViewController.m; sourceTree = "<group>"; };
+		322FC50A16A692180027E29F /* CardGame.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardGame.plist; sourceTree = "<group>"; };
+		322FC50B16A692180027E29F /* CardGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardGame.png; sourceTree = "<group>"; };
 		32562B2D16A00CFB00F97D92 /* CSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
 		32562B2E16A00CFB00F97D92 /* CSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
 		32562B6316A00EBE00F97D92 /* HeroCard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HeroCard.csv; sourceTree = "<group>"; };
 		3258D85D169E9E1100C06F6D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		32A4429916A64EE300A2C95F /* CGGameDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGameDataManager.h; sourceTree = "<group>"; };
+		32A4429A16A64EE300A2C95F /* CGGameDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGGameDataManager.m; sourceTree = "<group>"; };
+		32A4429D16A6570900A2C95F /* StratagemCard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StratagemCard.csv; sourceTree = "<group>"; };
+		32A4429E16A6570900A2C95F /* TrapCard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrapCard.csv; sourceTree = "<group>"; };
+		32A4429F16A6570900A2C95F /* TriggeredEffect.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TriggeredEffect.csv; sourceTree = "<group>"; };
 		32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGMainMenuViewController.h; sourceTree = "<group>"; };
 		32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGMainMenuViewController.m; sourceTree = "<group>"; };
 		DC21B8881511078F00FD4891 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
@@ -167,8 +186,19 @@
 		321A02FF168462CE00E436A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32A4429916A64EE300A2C95F /* CGGameDataManager.h */,
+				32A4429A16A64EE300A2C95F /* CGGameDataManager.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		322FC50916A692180027E29F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				322FC50A16A692180027E29F /* CardGame.plist */,
+				322FC50B16A692180027E29F /* CardGame.png */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		32562AFD16A00CFB00F97D92 /* ThirdParty */ = {
@@ -191,6 +221,7 @@
 		32562B5716A00EBE00F97D92 /* GameResources */ = {
 			isa = PBXGroup;
 			children = (
+				322FC50916A692180027E29F /* UI */,
 				32562B6216A00EBE00F97D92 /* ConfigFiles */,
 			);
 			name = GameResources;
@@ -200,6 +231,9 @@
 		32562B6216A00EBE00F97D92 /* ConfigFiles */ = {
 			isa = PBXGroup;
 			children = (
+				32A4429D16A6570900A2C95F /* StratagemCard.csv */,
+				32A4429E16A6570900A2C95F /* TrapCard.csv */,
+				32A4429F16A6570900A2C95F /* TriggeredEffect.csv */,
 				32562B6316A00EBE00F97D92 /* HeroCard.csv */,
 			);
 			path = ConfigFiles;
@@ -210,6 +244,10 @@
 			children = (
 				32AC7CE416918DE50013CDEA /* CGMainMenuViewController.h */,
 				32AC7CE516918DE50013CDEA /* CGMainMenuViewController.m */,
+				322FC50316A683360027E29F /* CGGamePlayViewController.h */,
+				322FC50416A683360027E29F /* CGGamePlayViewController.m */,
+				322FC50616A68AC50027E29F /* CGBeenShownCardViewController.h */,
+				322FC50716A68AC50027E29F /* CGBeenShownCardViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -457,6 +495,11 @@
 				DC2AE21C163AD9F600F2B1BD /* particlefx.plist in Resources */,
 				DC2AE21E163AD9F600F2B1BD /* particlefx.png in Resources */,
 				32562B6C16A00EBE00F97D92 /* HeroCard.csv in Resources */,
+				32A442A016A6570900A2C95F /* StratagemCard.csv in Resources */,
+				32A442A116A6570900A2C95F /* TrapCard.csv in Resources */,
+				32A442A216A6570900A2C95F /* TriggeredEffect.csv in Resources */,
+				322FC50C16A692180027E29F /* CardGame.plist in Resources */,
+				322FC50D16A692180027E29F /* CardGame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +538,9 @@
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
 				32AC7CE616918DE50013CDEA /* CGMainMenuViewController.m in Sources */,
 				32562B5016A00CFB00F97D92 /* CSVParser.m in Sources */,
+				32A4429B16A64EE300A2C95F /* CGGameDataManager.m in Sources */,
+				322FC50516A683360027E29F /* CGGamePlayViewController.m in Sources */,
+				322FC50816A68AC50027E29F /* CGBeenShownCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +594,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -556,6 +603,7 @@
 			baseConfigurationReference = DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

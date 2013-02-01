@@ -9,11 +9,14 @@
 #import "CGMainMenuViewController.h"
 //#import "PhysicNutsViewController.h"
 //#import "MyFirstSceneViewController.h"
+#import "CGGameDataManager.h"
 
 @implementation AppDelegate
 
 -(void) initializationComplete
 {
+    [[CGGameDataManager sharedManager] loadGameData];
+    
 	CGMainMenuViewController* mainMenuVC = [CGMainMenuViewController controller];
 	[self.gameController presentSceneViewController:mainMenuVC];
     
