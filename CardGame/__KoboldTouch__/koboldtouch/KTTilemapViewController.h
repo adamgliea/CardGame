@@ -9,6 +9,7 @@
 #import "KTViewController.h"
 #import "KTObjectLayerSpawnProtocol.h"
 
+@class KTTilemap;
 @class KTTilemapModel;
 @class KTTileLayerViewController;
 
@@ -27,6 +28,9 @@
 
 /** The TMX file to load respectively that was loaded. */
 @property (nonatomic, copy) NSString* tmxFile;
+
+/** The KTTilemap object containing the tilemap's data. */
+@property (nonatomic, readonly) KTTilemap* tilemap;
 
 /** Draw the objects (rectangles, polylines and polygones) just as they are drawn in Tiled. Mainly for debugging purposes, or if it is
  vital for the user to see the lines. However this flag enables objects on all layers, to toggle drawObjects for individual layers

@@ -71,8 +71,10 @@
 
 // Tilemap
 #import "KTTilemapViewController.h"
-#import "KTTileLayerViewController.h"
 #import "KTTilemapModel.h"
+#import "KTTileLayerViewController.h"
+#import "KTObjectLayerViewController.h"
+#import "KTObjectLayerSpawnProtocol.h"
 #import "KTTilemap.h"
 #import "KTTilemapProperties.h"
 #import "KTTilemapTileProperties.h"

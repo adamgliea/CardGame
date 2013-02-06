@@ -156,6 +156,12 @@
 	}
 }
 
+-(void) replaceTileset:(KTTilemapTileset*)originalTileset withTileset:(KTTilemapTileset*)otherTileset
+{
+	[originalTileset setAlternateTileset:otherTileset];
+	_forceDraw = YES;
+}
+
 -(KTTilemapTileset*) tilesetForGid:(gid_t)gid
 {
 	KTTilemapTileset* foundTileset = nil;
@@ -174,6 +180,19 @@
 	}
 	
 	return foundTileset;
+}
+
+-(KTTilemapTileset*) tilesetForName:(NSString*)name
+{
+	for (KTTilemapTileset* tileset in _tilesets)
+	{
+		if ([tileset.name isEqualToString:name])
+		{
+			return tileset;
+		}
+	}
+	
+	return nil;
 }
 
 -(void) addTileset:(KTTilemapTileset*)tileset

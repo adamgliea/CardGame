@@ -57,6 +57,7 @@
 		{
 			tileSprite = [[CCSprite alloc] init];
 			tileSprite.visible = NO;
+			tileSprite.anchorPoint = CGPointZero;
 			[_visibleTiles addObject:tileSprite];
 		}
 	}
@@ -71,31 +72,22 @@
 
 -(void) willRenderFrame
 {
-	if (CGPointEqualToPoint(position_, _previousPosition) == NO)
+	self.visible = _tileLayer.visible;
+	
+	if (CGPointEqualToPoint(position_, _previousPosition) == NO || _tileLayer.tilemap.forceDraw)
 	{
+		_tileLayer.tilemap.forceDraw = NO;
+		
 		// create initial tiles to fill screen
 		KTTilemap* tilemap = _tileLayer.tilemap;
 		CGSize mapSize = tilemap.mapSize;
 		CGSize gridSize = tilemap.gridSize;
-		CGSize halfGridSize = CGSizeMake(gridSize.width * 0.5f, gridSize.height * 0.5f);
 		
-		/*
-		CGPoint absoluteScrollPosition = CGPointMake(fabsf(position_.x), fabsf(position_.y));
-		CGPoint tileOffset = CGPointMake((int)(absoluteScrollPosition.x / gridSize.width), (int)(absoluteScrollPosition.y / gridSize.height));
-		CGPoint pointOffset = CGPointMake((int)(tileOffset.x * gridSize.width), (int)(tileOffset.y * gridSize.height));
-		*/
-
 		CGPoint inversePosition = ccpMult(position_, -1.0f);
 		CGPoint tileOffset = CGPointMake((int)(inversePosition.x / gridSize.width), (int)(inversePosition.y / gridSize.height));
 		CGPoint pointOffset = CGPointMake((int)(tileOffset.x * gridSize.width), (int)(tileOffset.y * gridSize.height));
 		//LOG_EXPR(tileOffset);
 		//LOG_EXPR(pointOffset);
-		
-		// focus pos is world position in tilemap
-		// start tile coord is half screen size minus focus
-		// end tile coord is half screen size plus focus
-		// view center: start coord is: focus pos minus view center
-		// view center: end coord is: focus pos plus (screen size minus view center)
 		
 		NSUInteger i = 0;
 		CCSprite* tileSprite = nil;
@@ -166,8 +158,8 @@
 				tileSprite.visible = YES;
 				tileSprite.textureRect = textureRect;
 				
-				CGPoint pos = CGPointMake(viewTilePosX * gridSize.width + halfGridSize.width + pointOffset.x,
-										  viewTilePosY * gridSize.height + halfGridSize.height + pointOffset.y);
+				CGPoint pos = CGPointMake(viewTilePosX * gridSize.width + pointOffset.x,
+										  viewTilePosY * gridSize.height + pointOffset.y);
 				if (pointOffset.x <= 0.0f)
 				{
 					//pos.x -= gridSize.width;
@@ -211,8 +203,8 @@
 				}
 				else
 				{
-					tileSprite.flipX = (gid & KTTilemapTileHorizontalFlip);
-					tileSprite.flipY = (gid & KTTilemapTileVerticalFlip);
+					tileSprite.flipX = ((gid & KTTilemapTileHorizontalFlip) == KTTilemapTileHorizontalFlip);
+					tileSprite.flipY = ((gid & KTTilemapTileVerticalFlip) == KTTilemapTileVerticalFlip);
 				}
 			}
 		}

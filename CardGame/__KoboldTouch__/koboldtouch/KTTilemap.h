@@ -65,11 +65,27 @@ typedef enum : unsigned char
  or if gid is 0). */
 -(KTTilemapTileset*) tilesetForGid:(gid_t)gid;
 
+/** Returns the tileset with the given name. Returns nil if there's no tileset with this name. */
+-(KTTilemapTileset*) tilesetForName:(NSString*)name;
+
+/** Internally replaces a tileset with another, so that tiles drawn with the originalTileset will now be drawn using the otherTileset.
+ This can be used to change the atmosphere of the tilemap, perhaps by changing from summer to winter, from "before attack" to "after attack", and so on.
+ 
+ Caution: both tilesets need to be compatible (ie same tile size) and the otherTileset should have at least as many tiles as the originalTileset to prevent
+ rendering issues (ie empty tiles).
+ */
+-(void) replaceTileset:(KTTilemapTileset*)originalTileset withTileset:(KTTilemapTileset*)otherTileset;
+
 /** Adds a tileset to the list of tilesets. */
 -(void) addLayer:(KTTilemapLayer*)layer;
 
 /** Returns the first layer with the given name, or nil if there's no layer with that name. Layer names are case-sensitive! */
 -(KTTilemapLayer*) layerByName:(NSString*)name;
+
+
+// internal use only
+// If set, will force a redraw of the tilemap's tile layers in the next frame.
+@property (nonatomic) BOOL forceDraw;
 
 @end
 

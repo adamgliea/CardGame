@@ -39,10 +39,25 @@
 	}
 }
 
+-(NSString*) imageFile
+{
+	if (_alternateTileset)
+	{
+		return _alternateTileset.imageFile;
+	}
+	return _imageFile;
+}
+
+
 static NSArray* kPVRImageFileExtensions = nil;
 
 -(CCTexture2D*) texture
 {
+	if (_alternateTileset)
+	{
+		return _alternateTileset.texture;
+	}
+	
 	if (_texture == nil)
 	{
 		if (kPVRImageFileExtensions == nil)
@@ -53,7 +68,6 @@ static NSArray* kPVRImageFileExtensions = nil;
 		// try loading .pvr.ccz / .pvr / .pvr.gz first and default to imageFile if not found
 		NSFileManager* fileManager = [NSFileManager defaultManager];
 		CCFileUtils* fileUtils = [CCFileUtils sharedFileUtils];
-		//NSLog(@"KTTilemapTileset now attempts to load tileset textures with pvr.ccz, pvr.gz and pvr extensions. This may cause cocos2d to spit out 'warning: file not found' messages. Ignore them!");
 		
 		for (NSString* fileExtension in kPVRImageFileExtensions)
 		{
@@ -113,6 +127,12 @@ static NSArray* kPVRImageFileExtensions = nil;
 
 -(CGRect) textureRectForGid:(gid_t)gid
 {
+	if (_alternateTileset)
+	{
+		gid_t alternateGid = (gid - _firstGid) + _alternateTileset.firstGid;
+		return [_alternateTileset textureRectForGid:alternateGid];
+	}
+	
 	gid_t tilesetGid = (gid & KTTilemapTileFlipMask);
 	if (gid == 0 || tilesetGid < _firstGid || tilesetGid > _lastGid)
 	{
@@ -127,6 +147,11 @@ static NSArray* kPVRImageFileExtensions = nil;
 
 -(KTTilemapProperties*) properties
 {
+	if (_alternateTileset)
+	{
+		return [_alternateTileset properties];
+	}
+
 	if (_properties == nil)
 	{
 		_properties = [[KTTilemapProperties alloc] init];
@@ -136,11 +161,26 @@ static NSArray* kPVRImageFileExtensions = nil;
 
 -(KTTilemapTileProperties*) tileProperties
 {
+	if (_alternateTileset)
+	{
+		return [_alternateTileset tileProperties];
+	}
+
 	if (_tileProperties == nil)
 	{
 		_tileProperties = [[KTTilemapTileProperties alloc] init];
 	}
 	return _tileProperties;
+}
+
+@dynamic alternateTileset;
+-(KTTilemapTileset*) alternateTileset
+{
+	return _alternateTileset;
+}
+-(void) setAlternateTileset:(KTTilemapTileset*)alternateTileset
+{
+	_alternateTileset = alternateTileset;
 }
 
 @end

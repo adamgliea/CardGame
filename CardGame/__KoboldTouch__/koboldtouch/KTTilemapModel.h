@@ -16,6 +16,7 @@
 @private
 }
 
+/** KTTilemap reference managed by the model. */
 @property (nonatomic, readonly) KTTilemap* tilemap;
 
 @end

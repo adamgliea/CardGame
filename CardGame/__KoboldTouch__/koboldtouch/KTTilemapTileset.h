@@ -30,6 +30,7 @@ typedef enum : gid_t
 {
 @private
 	__weak CCTexture2D* _texture;
+	__weak KTTilemapTileset* _alternateTileset;
 	unsigned int _textureRectCount;
 	CGRect* _textureRects;
 	KTTilemapProperties* _properties;
@@ -40,6 +41,8 @@ typedef enum : gid_t
 @property (nonatomic, copy) NSString* name;
 /** The image file without the path. Assumes the image file is in bundle's root folder. */
 @property (nonatomic, copy) NSString* imageFile;
+/** Points to the alternate tileset, used to draw tiles of this tileset from a different texture. Set by calling replaceTileset:withTileset: on KTTilemap. */
+@property (nonatomic, readonly) KTTilemapTileset* alternateTileset;
 /** The first GID in this tileset. It's the top-left tile in the tileset. */
 @property (nonatomic) gid_t firstGid;
 /** The last GID in this tileset. It's the bottom-most, right-most tile in the tileset.
@@ -60,7 +63,6 @@ typedef enum : gid_t
 /** The size of tiles (in points). Same as gridSize in KTTilemap. */
 @property (nonatomic) CGSize tileSize;
 /** The transparent color for this tileset. Format is in 3-digit hex numbers, for example "AB99F0".
- 
  Note: it's a string because I didn't want to bother converting to ccColor3B just because I didn't expect anyone to use it. If I'm wrong about that please let me know. */
 @property (nonatomic, copy) NSString* transparentColor;
 /** The texture used by this tileset. If this property is accessed while it's still nil, it will load the texture. */
@@ -72,5 +74,9 @@ typedef enum : gid_t
 
 /** Returns the texture rect for a specific GID. */
 -(CGRect) textureRectForGid:(gid_t)gid;
+
+
+// internal use only
+-(void) setAlternateTileset:(KTTilemapTileset*)alternateTileset;
 
 @end

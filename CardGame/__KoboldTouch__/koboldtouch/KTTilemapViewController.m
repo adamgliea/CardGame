@@ -9,6 +9,7 @@
 #import "KTTilemapViewController.h"
 #import "KTTileLayerViewController.h"
 #import "KTObjectLayerViewController.h"
+#import "KTTilemap.h"
 #import "KTTilemapModel.h"
 #import "KTTilemapLayerModel.h"
 #import "KTMoveAction.h"
@@ -219,6 +220,12 @@
 -(void) scrollByTileOffset:(CGPoint)tileOffset speed:(float)speed
 {
 	[self scrollToPosition:[self positionFromTileCoord:tileOffset] timeFactor:speed positionIsOffset:YES timeFactorIsSpeed:YES];
+}
+
+@dynamic tilemap;
+-(KTTilemap*) tilemap
+{
+	return ((KTTilemapModel*)self.model).tilemap;
 }
 
 @end

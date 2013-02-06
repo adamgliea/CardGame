@@ -241,6 +241,13 @@ static BOOL _deferSubControllerAddAndRemove = NO;
 			return controller;
 		}
 	}
+	for (KTController* controller in _toBeAddedSubControllers)
+	{
+		if ([controller isKindOfClass:controllerClass])
+		{
+			return controller;
+		}
+	}
 	
 	return nil;
 }
@@ -254,6 +261,13 @@ static BOOL _deferSubControllerAddAndRemove = NO;
 			return controller;
 		}
 	}
+	for (KTController* controller in _toBeAddedSubControllers)
+	{
+		if ([controller.name isEqualToString:controllerName])
+		{
+			return controller;
+		}
+	}
 	
 	return nil;
 }
@@ -261,6 +275,13 @@ static BOOL _deferSubControllerAddAndRemove = NO;
 -(KTController*) subControllerByTag:(NSInteger)controllerTag
 {
 	for (KTController* controller in _subControllers)
+	{
+		if (controller.tag == controllerTag)
+		{
+			return controller;
+		}
+	}
+	for (KTController* controller in _toBeAddedSubControllers)
 	{
 		if (controller.tag == controllerTag)
 		{
